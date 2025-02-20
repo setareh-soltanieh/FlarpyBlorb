@@ -125,7 +125,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 5.25, y: 21.95}
   m_EdgeRadius: 0
 --- !u!212 &8215197306347829750
 SpriteRenderer:
@@ -269,6 +269,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b37da40331602754ca00e784405ba4a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  logic: {fileID: 0}
 --- !u!1 &5616190472447499704
 GameObject:
   m_ObjectHideFlags: 0
@@ -345,7 +346,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 5.04, y: 21.96}
   m_EdgeRadius: 0
 --- !u!212 &7128364705369666296
 SpriteRenderer:

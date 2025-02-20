@@ -31,7 +31,7 @@ public class PipeMiddle : MonoBehaviour
         if (collision.gameObject.layer == 3)
         {
             Debug.Log("Collision");
-            logic.addScore();
+            logic.addScore(1);
         } 
     }
 }
