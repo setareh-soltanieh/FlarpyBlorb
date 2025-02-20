@@ -8,9 +8,9 @@ public class Logic : MonoBehaviour
     public Text scoreText;
     public int playerScore = 0;
 
-    public void addScore()
+    public void addScore(int scoreToAdd)
     {
-        playerScore = playerScore + 1;
+        playerScore = playerScore + scoreToAdd;
         scoreText.text = playerScore.ToString();
         Debug.Log("Score added");
     }

@@ -28,7 +28,10 @@ public class PipeMiddle : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        Debug.Log("Collision");
-        logic.addScore();
+        if (collision.gameObject.layer == 3)
+        {
+            Debug.Log("Collision");
+            logic.addScore();
+        } 
     }
 }
