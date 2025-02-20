@@ -6,6 +6,9 @@ public class PipeMove : MonoBehaviour
 {
     public float moveSpeed = 5;
     public float deadZone = -23;
+    public float speedIncreaseRate = 0.1f;
+    public float maxSpeed = 15f;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -15,7 +18,10 @@ public class PipeMove : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.position = transform.position + (Vector3.left * moveSpeed) * Time.deltaTime;
+        // Increase speed over time but cap it at maxSpeed
+        moveSpeed = Mathf.Min(moveSpeed + (speedIncreaseRate * Time.deltaTime), maxSpeed);
+
+        transform.position = transform.position + (Vector3.left * (moveSpeed)) * Time.deltaTime;
 
         if (transform.position.x < deadZone)
         {

@@ -9,11 +9,14 @@ public class Logic : MonoBehaviour
     public Text scoreText;
     public int playerScore = 0;
     public GameObject gameOverScreen;
+    public AudioSource bibSFX;
+    public AudioSource gameOverSFX;
 
     public void addScore(int scoreToAdd)
     {
         playerScore = playerScore + scoreToAdd;
         scoreText.text = playerScore.ToString();
+        bibSFX.Play();
         Debug.Log("Score added");
     }
 
@@ -24,5 +27,6 @@ public class Logic : MonoBehaviour
     public void gameOver()
     {
         gameOverScreen.SetActive(true);
+        gameOverSFX.Play();
     }
 }
